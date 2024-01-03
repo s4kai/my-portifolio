@@ -24,26 +24,26 @@ export function Experience() {
       </Reveal>
       <Separator />
 
-      <div className="container flex justify-center pt-6 ">
+      <div className="flex justify-center pt-6 ">
         <div className="border-b pb-5">
           <div className="mb-4 flex justify-between">
             <Reveal>
-              <h3 className="text-2xl font-semibold leading-none tracking-tight">
+              <h3 className="text-xl md:file:text-2xl font-semibold leading-none tracking-tight">
                 Freelancer
               </h3>
             </Reveal>
             <Reveal>
-              <span className="text-md ">2023 - Presente</span>
+              <span className="text-sm md:text-md">2023 - Presente</span>
             </Reveal>
           </div>
           <div className="flex justify-between">
             <Reveal>
-              <h3 className="text-xl font-semibold leading-none tracking-tight text-blue-500">
+              <h3 className="text-md md:text-xl font-semibold leading-none tracking-tight text-blue-500">
                 Desenvolvedor de Software
               </h3>
             </Reveal>
             <Reveal>
-              <span className="text-md ">Online</span>
+              <span className="text-sm ">Online</span>
             </Reveal>
           </div>
           <Reveal>

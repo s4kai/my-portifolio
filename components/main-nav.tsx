@@ -75,7 +75,10 @@ export function MainNav({ items }: MainNavProps) {
       <div className="block md:hidden">
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="text-black-500 hover:text-black-400 flex items-center rounded px-3 py-2"
+          className={buttonVariants({
+            size: "icon",
+            variant: "ghost",
+          })}
         >
           <Icons.menu
             className={cn("h-6 w-6 fill-current", isOpen ? "hidden" : "block")}

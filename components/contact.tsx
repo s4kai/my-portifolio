@@ -17,7 +17,7 @@ export function Contact() {
 
         <Reveal>
           <a
-            className="flex items-center justify-center gap-4 text-3xl transition-colors hover:text-blue-500  "
+            className="flex items-center justify-center gap-4 text-2xl md:text-3xl transition-colors hover:text-blue-500  "
             href="malito:vinicius.sakai@tuta.io"
           >
             <span>
