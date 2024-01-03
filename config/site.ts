@@ -19,7 +19,6 @@ export const siteConfig = {
     },
   ],
   links: {
-    twitter: "https://twitter.com/shadcn",
     github: "https://github.com/viniciussakai",
     linkedin: "https://www.linkedin.com/in/vinicius-sakai",
     email: "mailto:vinicius.sakai@tuta.io",

@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 
 import { NavItem } from "@/types/nav"
 import { siteConfig } from "@/config/site"
@@ -16,6 +17,7 @@ interface MainNavProps {
 
 export function MainNav({ items }: MainNavProps) {
   const [isOpen, setIsOpen] = useState(false)
+  const pathname = usePathname()
 
   return (
     <>
@@ -42,7 +44,8 @@ export function MainNav({ items }: MainNavProps) {
                     href={item.href}
                     className={cn(
                       "flex items-center text-sm font-medium text-muted-foreground",
-                      item.disabled && "cursor-not-allowed opacity-80"
+                      item.disabled && "cursor-not-allowed opacity-80",
+                      pathname === item.href && "text-blue-500 font-bold"
                     )}
                   >
                     {item.title}
