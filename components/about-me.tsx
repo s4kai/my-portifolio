@@ -23,6 +23,11 @@ const dailyTech = [
   "Git",
 ]
 
+function calcAge(dateString: string) {
+  var birthday = +new Date(dateString)
+  return ~~((Date.now() - birthday) / 31557600000)
+}
+
 const otherTech = ["Rust", "Java", "GraphQL", "Python", "Crystal"]
 
 export function AboutMe() {
@@ -40,11 +45,10 @@ export function AboutMe() {
           <div className="grid">
             <Reveal>
               <p className="first-letter:text-2xl float-left first-letter:text-extrabold">
-                Olá, me chamo Vinicius e tenho 18 anos, como desenvolvedor sou
-                apaixonado por inovação e tecnologia, mergulhei no mundo do
-                desenvolvimento de software, onde pude contribuir
-                significativamente em projetos desafiadores e colaborativos.
-                Minha jornada profissional inclui experiências gratificantes
+                Olá, me chamo Vinicius e tenho{" "}
+                {calcAge("Jul 14 2005 00:51:54 GMT-0300 (BRT)")} anos, como todo
+                desenvolvedor, sou apaixonado por inovação e tecnologia. Minha
+                jornada profissional inclui experiências gratificantes
                 trabalhando com freelancers em projetos diversos, utilizando
                 principalmente Ruby, TypeScript e PHP como minhas ferramentas
                 principais.
@@ -67,8 +71,7 @@ export function AboutMe() {
                 desenvolvedor. Estou sempre em busca de aprender e aprimorar
                 minhas habilidades para enfrentar os desafios mais complexos e
                 contribuir de maneira significativa para o desenvolvimento de
-                soluções inovadoras Atualmente, estou cursando Ciência da
-                Computação na Universidade xxx
+                soluções inovadoras.
               </p>
             </Reveal>
             <Reveal>
