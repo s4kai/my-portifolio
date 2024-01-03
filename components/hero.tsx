@@ -24,8 +24,9 @@ export function Hero() {
         </Reveal>
         <Reveal>
           <p className="max-w-[700px] text-lg text-muted-foreground">
-            Accessible and customizable components that you can copy and paste
-            into your apps. Free. Open Source. And Next.js 13 Ready.
+            Combinando paixão pela inovação e expertise técnica, eu sou um
+            desenvolvedor comprometido em transformar ideias em soluções
+            digitais impactantes e funcionais.
           </p>
         </Reveal>
       </div>
