@@ -1,7 +1,8 @@
 "use client"
 
 import { useWindowScroll } from "@uidotdev/usehooks"
-import { ArrowUp } from "lucide-react"
+
+import { Icons } from "./icons"
 
 export function TopIndicator() {
   const [{ x, y }, scrollTo] = useWindowScroll()
@@ -14,7 +15,7 @@ export function TopIndicator() {
           scrollTo({ top: 0, behavior: "smooth" })
         }}
       >
-        <ArrowUp className="w-6 h-6 text-white " />
+        <Icons.arrowUp className="w-6 h-6 text-white " />
       </div>
     )
   } else {

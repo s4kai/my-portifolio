@@ -1,5 +1,4 @@
 import Link from "next/link"
-import { Code2 } from "lucide-react"
 
 import { Icons } from "./icons"
 import { Reveal } from "./reveal"
@@ -73,7 +72,7 @@ export function AboutMe() {
             <Reveal>
               <div className="flex gap-4 items-center mt-8">
                 <span className="flex items-center text-blue-500 text-lg ">
-                  Meus links <Icons.ArrowRight className="w-5 h-5" />
+                  Meus links <Icons.arrowRight className="w-5 h-5" />
                 </span>
 
                 <div className="flex gap-4">
@@ -91,7 +90,7 @@ export function AboutMe() {
         <div className="md:col-span-4 md:mt-0 mt-10">
           <Reveal>
             <h3 className="scroll-m-20 text-xl font-bold tracking-tight flex items-center gap-4 my-5">
-              <Code2 /> Uso diário
+              <Icons.code /> Uso diário
             </h3>
 
             <div className="flex gap-3 flex-wrap">
@@ -106,7 +105,7 @@ export function AboutMe() {
           </Reveal>
           <Reveal>
             <h3 className="scroll-m-20 text-xl font-bold tracking-tight flex items-center gap-4 my-5">
-              <Code2 /> Outras tecnologias
+              <Icons.fun /> Outras tecnologias
             </h3>
             <div className="flex gap-2 flex-wrap">
               {otherTech.map((tech) => {

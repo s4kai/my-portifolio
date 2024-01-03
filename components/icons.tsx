@@ -1,7 +1,14 @@
 import {
   ArrowRight,
+  ArrowUp,
+  Code2 as Code,
   LinkedinIcon as Linkedin,
+  LucideExternalLink,
+  LucideMenu,
   LucideProps,
+  LucideSmile,
+  LucideX,
+  Mail,
   Moon,
   SunMedium,
   Twitter,
@@ -31,5 +38,12 @@ export const Icons = {
     </svg>
   ),
   linkedin: Linkedin,
-  ArrowRight: ArrowRight,
+  arrowRight: ArrowRight,
+  code: Code,
+  mail: Mail,
+  menu: LucideMenu,
+  x: LucideX,
+  externalLink: LucideExternalLink,
+  arrowUp: ArrowUp,
+  fun: LucideSmile,
 }

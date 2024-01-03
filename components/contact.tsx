@@ -1,5 +1,4 @@
-import { Mail } from "lucide-react"
-
+import { Icons } from "./icons"
 import { Reveal } from "./reveal"
 
 export function Contact() {
@@ -22,7 +21,7 @@ export function Contact() {
             href="malito:vinicius.sakai@tuta.io"
           >
             <span>
-              <Mail className="w-8 h-8" />
+              <Icons.mail className="w-8 h-8" />
             </span>
             vinicius.sakai@tuta.io
           </a>

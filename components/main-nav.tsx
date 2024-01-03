@@ -2,7 +2,6 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { LucideMenu, LucideX } from "lucide-react"
 
 import { NavItem } from "@/types/nav"
 import { siteConfig } from "@/config/site"
@@ -67,10 +66,10 @@ export function MainNav({ items }: MainNavProps) {
           onClick={() => setIsOpen(!isOpen)}
           className="flex items-center px-3 py-2 rounded text-black-500 hover:text-black-400"
         >
-          <LucideMenu
+          <Icons.menu
             className={cn("fill-current h-6 w-6", isOpen ? "hidden" : "block")}
           />
-          <LucideX
+          <Icons.x
             className={cn("fill-current h-6 w-6", isOpen ? "block" : "hidden")}
           />
         </button>

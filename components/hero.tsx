@@ -29,24 +29,26 @@ export function Hero() {
           </p>
         </Reveal>
       </div>
-      <div className="flex items-start gap-4 mb-auto">
+      <div className=" mb-auto">
         <Reveal>
-          <Link
-            href={siteConfig.links.docs}
-            target="_blank"
-            rel="noreferrer"
-            className={buttonVariants()}
-          >
-            Contate-me
-          </Link>
-          <Link
-            target="_blank"
-            rel="noreferrer"
-            href={siteConfig.links.github}
-            className={buttonVariants({ variant: "outline" })}
-          >
-            GitHub
-          </Link>
+          <div className="flex items-start gap-4">
+            <Link
+              href={siteConfig.links.email}
+              target="_blank"
+              rel="noreferrer"
+              className={buttonVariants()}
+            >
+              Contate-me
+            </Link>
+            <Link
+              target="_blank"
+              rel="noreferrer"
+              href={siteConfig.links.github}
+              className={buttonVariants({ variant: "outline" })}
+            >
+              GitHub
+            </Link>
+          </div>
         </Reveal>
       </div>
     </section>

@@ -2,7 +2,6 @@
 
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { LucideExternalLink } from "lucide-react"
 
 import { Separator } from "@/components/ui/separator"
 
@@ -44,7 +43,7 @@ export function ProjectItem() {
               </div>
               <div className="flex gap-2">
                 <Icons.gitHub className="w-6 h-6" />
-                <LucideExternalLink className="w-6 h-6" />
+                <Icons.externalLink className="w-6 h-6" />
               </div>
             </div>
 
