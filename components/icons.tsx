@@ -1,4 +1,6 @@
 import {
+  ArrowRight,
+  LinkedinIcon as Linkedin,
   LucideProps,
   Moon,
   SunMedium,
@@ -28,4 +30,6 @@ export const Icons = {
       ></path>
     </svg>
   ),
+  linkedin: Linkedin,
+  ArrowRight: ArrowRight,
 }
