@@ -1,41 +1,80 @@
-import * as React from "react"
+"use client"
+
+import { useState } from "react"
 import Link from "next/link"
+import { LucideMenu, LucideX } from "lucide-react"
 
 import { NavItem } from "@/types/nav"
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 import { Icons } from "@/components/icons"
 
+import { buttonVariants } from "./ui/button"
+
 interface MainNavProps {
   items?: NavItem[]
 }
 
 export function MainNav({ items }: MainNavProps) {
+  const [isOpen, setIsOpen] = useState(false)
+
   return (
-    <div className="flex gap-6 md:gap-10">
-      <Link href="/" className="flex items-center space-x-2">
-        <Icons.logo className="h-6 w-6" />
-        <span className="inline-block font-bold">{siteConfig.name}</span>
-      </Link>
-      {items?.length ? (
-        <nav className="flex gap-6">
-          {items?.map(
-            (item, index) =>
-              item.href && (
-                <Link
-                  key={index}
-                  href={item.href}
-                  className={cn(
-                    "flex items-center text-sm font-medium text-muted-foreground",
-                    item.disabled && "cursor-not-allowed opacity-80"
-                  )}
-                >
-                  {item.title}
-                </Link>
-              )
-          )}
-        </nav>
-      ) : null}
-    </div>
+    <>
+      <div className="flex flex-1">
+        <Link href="/" className="flex items-center space-x-2">
+          <Icons.logo className="h-6 w-6" />
+          <span className={cn("font-bold", isOpen ? "hidden" : "inline-block")}>
+            {siteConfig.name}
+          </span>
+        </Link>
+
+        {items?.length ? (
+          <nav
+            className={cn(
+              "flex-1 md:flex py-10 md:flex-row gap-6 items-center justify-center lg:justify-end lg:mr-20 flex-col",
+              isOpen ? "flex" : "hidden"
+            )}
+          >
+            {items?.map(
+              (item, index) =>
+                item.href && (
+                  <Link
+                    key={index}
+                    href={item.href}
+                    className={cn(
+                      "flex items-center text-sm font-medium text-muted-foreground",
+                      item.disabled && "cursor-not-allowed opacity-80"
+                    )}
+                  >
+                    {item.title}
+                  </Link>
+                )
+            )}
+
+            <Link
+              href={"/CV - VINICIUS SAKAI.pdf"}
+              target="_blank"
+              rel="noreferrer"
+              className={buttonVariants()}
+            >
+              Veja meu CV
+            </Link>
+          </nav>
+        ) : null}
+      </div>
+      <div className="block md:hidden">
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="flex items-center px-3 py-2 rounded text-black-500 hover:text-black-400"
+        >
+          <LucideMenu
+            className={cn("fill-current h-6 w-6", isOpen ? "hidden" : "block")}
+          />
+          <LucideX
+            className={cn("fill-current h-6 w-6", isOpen ? "block" : "hidden")}
+          />
+        </button>
+      </div>
+    </>
   )
 }
