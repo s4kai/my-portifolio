@@ -1,5 +1,7 @@
 import Link from "next/link"
 
+import { siteConfig } from "@/config/site"
+
 import { Icons } from "./icons"
 import { Reveal } from "./reveal"
 import { Separator } from "./ui/separator"
@@ -77,11 +79,13 @@ export function AboutMe() {
 
                 <div className="flex gap-4">
                   <Link
-                    href={"/"}
+                    href={siteConfig.links.github}
                     children={<Icons.gitHub className="h-5 w-5" />}
                   ></Link>
-                  <Link href={"/"} children={<Icons.linkedin />}></Link>
-                  <Link href={"/"} children={<Icons.linkedin />}></Link>
+                  <Link
+                    href={siteConfig.links.linkedin}
+                    children={<Icons.linkedin />}
+                  ></Link>
                 </div>
               </div>
             </Reveal>

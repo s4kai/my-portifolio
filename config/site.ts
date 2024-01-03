@@ -11,16 +11,17 @@ export const siteConfig = {
     },
     {
       title: "Tecnologias",
-      href: "/",
+      href: "/techs",
     },
     {
       title: "Projetos",
-      href: "/",
+      href: "/projects",
     },
   ],
   links: {
     twitter: "https://twitter.com/shadcn",
-    github: "https://github.com/shadcn/ui",
-    docs: "https://ui.shadcn.com",
+    github: "https://github.com/viniciussakai",
+    linkedin: "https://www.linkedin.com/in/vinicius-sakai",
+    email: "mailto:vinicius.sakai@tuta.io",
   },
 }
