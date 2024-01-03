@@ -2,7 +2,7 @@ import { Mail } from "lucide-react"
 
 export function Contact() {
   return (
-    <section className="container items-center justify-center flex flex-col gap-6 min-h-[600px] h-full pb-8 pt-6 md:py-10">
+    <section className="container items-center justify-center flex flex-col gap-6 min-h-[600px] h-full">
       <div className="flex flex-col text-center max-w-[800px]">
         <h2 className="text-3xl md:text-5xl font-extrabold">Contate-me</h2>
         <p className="text-xl">
