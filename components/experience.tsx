@@ -1,6 +1,19 @@
 import { Reveal } from "./reveal"
 import { Separator } from "./ui/separator"
 
+const freelancerTechs = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "TypeScript",
+  "JQuery",
+  "PHP",
+  "Laravel",
+  "WordPress",
+  "MySQL",
+  "PostgreSQL",
+]
+
 export function Experience() {
   return (
     <section className="container grid items-center  gap-2 pb-8 pt-6 md:py-10">
@@ -34,22 +47,22 @@ export function Experience() {
             </Reveal>
           </div>
           <Reveal>
-            <p>
-              I help build and scale Google Photos. Increased throughput of our
-              primary services by 70%. Migrated backend service from Java to Go.
-              Also helped make it look prettier.
+            <p className="max-w-[1000px]">
+              Como freelancer, meu foco principal é o desenvolvimento de
+              aplicativos e sites personalizados para atender às necessidades
+              específicas de empresas e indivíduos. Ao longo da minha carreira,
+              adquiri ampla experiência e expertise em diversas linguagens e
+              tecnologias fundamentais para criar produtos de alta qualidade.
             </p>
           </Reveal>
 
           <Reveal>
             <ul className="list-none flex gap-4">
-              <li className=" rounded bg-muted px-3 py-1 text-sm font-semibold hover:scale-105 transition-all">
-                "AAAAA"
-              </li>
-
-              <li className=" rounded bg-muted px-3 py-1 text-sm font-semibold hover:scale-105 transition-all">
-                "AAAAA"
-              </li>
+              {freelancerTechs.map((tech, index) => (
+                <li className=" rounded bg-muted px-3 py-1 text-sm font-semibold hover:scale-105 transition-all">
+                  {tech}
+                </li>
+              ))}
             </ul>
           </Reveal>
         </div>
