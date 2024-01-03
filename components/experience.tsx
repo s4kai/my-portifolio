@@ -26,7 +26,7 @@ export function Experience() {
 
       <div className="container p-6 ">
         <div className="border-b pb-5">
-          <div className="flex justify-between mb-4">
+          <div className="mb-4 flex justify-between">
             <Reveal>
               <h3 className="text-2xl font-semibold leading-none tracking-tight">
                 Freelancer
@@ -38,7 +38,7 @@ export function Experience() {
           </div>
           <div className="flex justify-between">
             <Reveal>
-              <h3 className="text-xl font-semibold text-blue-500 leading-none tracking-tight">
+              <h3 className="text-xl font-semibold leading-none tracking-tight text-blue-500">
                 Desenvolvedor de Software
               </h3>
             </Reveal>
@@ -57,9 +57,9 @@ export function Experience() {
           </Reveal>
 
           <Reveal>
-            <ul className="list-none flex gap-4">
+            <ul className="flex list-none gap-4">
               {freelancerTechs.map((tech, index) => (
-                <li className=" rounded bg-muted px-3 py-1 text-sm font-semibold hover:scale-105 transition-all">
+                <li className=" rounded bg-muted px-3 py-1 text-sm font-semibold transition-all hover:scale-105">
                   {tech}
                 </li>
               ))}

@@ -27,7 +27,7 @@ export function ProjectItem() {
       transition={{ duration: 0.2, ease: "easeIn" }}
     >
       <Card className="border-none ">
-        <div className="bg-muted max-h-60 p-10 rounded-md grid place-content-center">
+        <div className="grid max-h-60 place-content-center rounded-md bg-muted p-10">
           {/*    <img
           src="https://picsum.photos/720/405"
           className="rounded-xl max-h-[300px] translate-y-20  object-cover z-0 hover:rotate-3 hover:scale-105 transition-all duration-200 ease-in-out transform"
@@ -35,15 +35,15 @@ export function ProjectItem() {
         /> */}
         </div>
         <Reveal>
-          <CardHeader className="z-10 relative bg-white dark:bg-slate-950">
+          <CardHeader className="relative z-10 bg-white dark:bg-slate-950">
             <div className="flex flex-row items-center gap-4 ">
               <CardTitle>Card Title</CardTitle>
               <div className="flex-1">
                 <Separator />
               </div>
               <div className="flex gap-2">
-                <Icons.gitHub className="w-6 h-6" />
-                <Icons.externalLink className="w-6 h-6" />
+                <Icons.gitHub className="h-6 w-6" />
+                <Icons.externalLink className="h-6 w-6" />
               </div>
             </div>
 
@@ -51,7 +51,7 @@ export function ProjectItem() {
           </CardHeader>
         </Reveal>
         <Reveal>
-          <CardContent className="z-10  relative bg-white dark:bg-slate-950">
+          <CardContent className="relative  z-10 bg-white dark:bg-slate-950">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci,
             quam aliquid voluptatem reprehenderit vero dolor deleniti
             necessitatibus, alias accusamus nam inventore nostrum vel expedita

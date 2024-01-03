@@ -40,11 +40,11 @@ export function AboutMe() {
       </Reveal>
       <Separator />
 
-      <div className="flex flex-col lg:grid grid-cols-12 w-100 lg:gap-8">
+      <div className="w-100 flex grid-cols-12 flex-col lg:grid lg:gap-8">
         <div className="col-span-8">
           <div className="grid">
             <Reveal>
-              <p className="first-letter:text-2xl float-left first-letter:text-extrabold">
+              <p className="first-letter:text-extrabold float-left first-letter:text-2xl">
                 Olá, me chamo Vinicius e tenho{" "}
                 {calcAge("Jul 14 2005 00:51:54 GMT-0300 (BRT)")} anos, como todo
                 desenvolvedor, sou apaixonado por inovação e tecnologia. Minha
@@ -75,35 +75,35 @@ export function AboutMe() {
               </p>
             </Reveal>
             <Reveal>
-              <div className="flex gap-4 items-center mt-8">
-                <span className="flex items-center text-blue-500 text-lg ">
-                  Meus links <Icons.arrowRight className="w-5 h-5" />
+              <div className="mt-8 flex items-center gap-4">
+                <span className="flex items-center text-lg text-blue-500 ">
+                  Meus links <Icons.arrowRight className="h-5 w-5" />
                 </span>
 
                 <div className="flex gap-4">
-                  <Link
-                    href={siteConfig.links.github}
-                    children={<Icons.gitHub className="h-5 w-5" />}
-                  ></Link>
-                  <Link
-                    href={siteConfig.links.linkedin}
-                    children={<Icons.linkedin />}
-                  ></Link>
+                  <Link href={siteConfig.links.github}>
+                    <Icons.gitHub className="h-5 w-5" />
+                    <span className="sr-only">Link github</span>
+                  </Link>
+                  <Link href={siteConfig.links.linkedin}>
+                    <Icons.linkedin />
+                    <span className="sr-only">Link Linkedin</span>
+                  </Link>
                 </div>
               </div>
             </Reveal>
           </div>
         </div>
-        <div className="md:col-span-4 md:mt-0 mt-10">
+        <div className="mt-10 md:col-span-4 md:mt-0">
           <Reveal>
-            <h3 className="scroll-m-20 text-xl font-bold tracking-tight flex items-center gap-4 my-5">
+            <h3 className="my-5 flex scroll-m-20 items-center gap-4 text-xl font-bold tracking-tight">
               <Icons.code /> Uso diário
             </h3>
 
-            <div className="flex gap-3 flex-wrap">
+            <div className="flex flex-wrap gap-3">
               {dailyTech.map((tech) => {
                 return (
-                  <span className=" rounded bg-muted px-3 py-1 text-sm font-semibold hover:scale-105 transition-all">
+                  <span className=" rounded bg-muted px-3 py-1 text-sm font-semibold transition-all hover:scale-105">
                     {tech}
                   </span>
                 )
@@ -111,10 +111,10 @@ export function AboutMe() {
             </div>
           </Reveal>
           <Reveal>
-            <h3 className="scroll-m-20 text-xl font-bold tracking-tight flex items-center gap-4 my-5">
+            <h3 className="my-5 flex scroll-m-20 items-center gap-4 text-xl font-bold tracking-tight">
               <Icons.fun /> Outras tecnologias
             </h3>
-            <div className="flex gap-2 flex-wrap">
+            <div className="flex flex-wrap gap-2">
               {otherTech.map((tech) => {
                 return (
                   <span className=" rounded bg-muted px-3 py-1 text-sm font-semibold">

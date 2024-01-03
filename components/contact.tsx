@@ -3,10 +3,10 @@ import { Reveal } from "./reveal"
 
 export function Contact() {
   return (
-    <section className="container items-center justify-center flex flex-col gap-6 min-h-[600px] h-full">
-      <div className="flex flex-col text-center max-w-[800px]">
+    <section className="container flex h-full min-h-[600px] flex-col items-center justify-center gap-6">
+      <div className="flex max-w-[800px] flex-col text-center">
         <Reveal>
-          <h2 className="text-3xl md:text-5xl font-extrabold">Contate-me</h2>
+          <h2 className="text-3xl font-extrabold md:text-5xl">Contate-me</h2>
         </Reveal>
         <Reveal>
           <p className="text-xl">
@@ -17,11 +17,11 @@ export function Contact() {
 
         <Reveal>
           <a
-            className="text-3xl flex justify-center items-center gap-4 hover:text-blue-500 transition-colors  "
+            className="flex items-center justify-center gap-4 text-3xl transition-colors hover:text-blue-500  "
             href="malito:vinicius.sakai@tuta.io"
           >
             <span>
-              <Icons.mail className="w-8 h-8" />
+              <Icons.mail className="h-8 w-8" />
             </span>
             vinicius.sakai@tuta.io
           </a>

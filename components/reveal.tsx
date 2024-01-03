@@ -19,7 +19,7 @@ export function Reveal({ children, width }: RevealProps) {
       mainControls.start("visible")
       slideControls.start("visible")
     }
-  }, [isInView])
+  }, [isInView, mainControls, slideControls])
 
   return (
     <div ref={ref} className="relative overflow-hidden">
@@ -54,7 +54,7 @@ export function Reveal({ children, width }: RevealProps) {
         initial="hidden"
         animate={slideControls}
         transition={{ duration: 0.5, ease: "easeIn" }}
-        className="absolute top-1 bottom-1 left-0 right-0 bg-slate-50 dark:bg-slate-900 z-20"
+        className="absolute inset-x-0 inset-y-1 z-20 bg-slate-50 dark:bg-slate-900"
       ></motion.div>
     </div>
   )

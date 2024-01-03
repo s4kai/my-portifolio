@@ -32,7 +32,7 @@ export function MainNav({ items }: MainNavProps) {
         {items?.length ? (
           <nav
             className={cn(
-              "flex-1 md:flex py-10 md:flex-row gap-6 items-center justify-center lg:justify-end lg:mr-20 flex-col",
+              "flex-1 flex-col items-center justify-center gap-6 py-10 md:flex md:flex-row lg:mr-20 lg:justify-end",
               isOpen ? "flex" : "hidden"
             )}
           >
@@ -45,7 +45,7 @@ export function MainNav({ items }: MainNavProps) {
                     className={cn(
                       "flex items-center text-sm font-medium text-muted-foreground",
                       item.disabled && "cursor-not-allowed opacity-80",
-                      pathname === item.href && "text-blue-500 font-bold"
+                      pathname === item.href && "font-bold text-blue-500"
                     )}
                   >
                     {item.title}
@@ -67,14 +67,15 @@ export function MainNav({ items }: MainNavProps) {
       <div className="block md:hidden">
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="flex items-center px-3 py-2 rounded text-black-500 hover:text-black-400"
+          className="text-black-500 hover:text-black-400 flex items-center rounded px-3 py-2"
         >
           <Icons.menu
-            className={cn("fill-current h-6 w-6", isOpen ? "hidden" : "block")}
+            className={cn("h-6 w-6 fill-current", isOpen ? "hidden" : "block")}
           />
           <Icons.x
-            className={cn("fill-current h-6 w-6", isOpen ? "block" : "hidden")}
+            className={cn("h-6 w-6 fill-current", isOpen ? "block" : "hidden")}
           />
+          <span className="sr-only">Abrir menu</span>
         </button>
       </div>
     </>

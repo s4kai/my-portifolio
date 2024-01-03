@@ -12,7 +12,7 @@ export function Projects() {
       </Reveal>
       <Separator />
 
-      <div className="grid grid-cols-1 lg:grid-cols-2  auto-cols-max place-items-center gap-5">
+      <div className="grid auto-cols-max grid-cols-1  place-items-center gap-5 lg:grid-cols-2">
         {[0, 1, 2, 3].map((_, index) => (
           <ProjectItem key={index} />
         ))}

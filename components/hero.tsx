@@ -7,8 +7,8 @@ import { buttonVariants } from "./ui/button"
 
 export function Hero() {
   return (
-    <section className="container flex flex-col gap-4 min-h-[700px] h-full pb-8 pt-6 md:py-10">
-      <div className="flex max-w-[980px] flex-col items-start gap-2 mt-auto">
+    <section className="container flex h-full min-h-[700px] flex-col gap-4 pb-8 pt-6 md:py-10">
+      <div className="mt-auto flex max-w-[980px] flex-col items-start gap-2">
         <Reveal>
           <h1 className="text-3xl font-extrabold leading-tight tracking-tighter md:text-5xl">
             Olá, meu nome é Vinicius Sakai
