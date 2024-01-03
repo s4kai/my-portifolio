@@ -16,7 +16,7 @@ const freelancerTechs = [
 
 export function Experience() {
   return (
-    <section className="container grid items-center  gap-2 pb-8 pt-6 md:py-10">
+    <section className="container grid items-center  gap-2 pb-8 pt-6 lg:py-10">
       <Reveal>
         <h2 className="scroll-m-20 pb-2 text-3xl font-bold tracking-tight first:mt-0">
           Experiencias
@@ -24,7 +24,7 @@ export function Experience() {
       </Reveal>
       <Separator />
 
-      <div className="container p-6 ">
+      <div className="container flex justify-center pt-6 ">
         <div className="border-b pb-5">
           <div className="mb-4 flex justify-between">
             <Reveal>
@@ -47,7 +47,7 @@ export function Experience() {
             </Reveal>
           </div>
           <Reveal>
-            <p className="max-w-[1000px]">
+            <p className="max-w-[600px] lg:max-w-full">
               Como freelancer, meu foco principal é o desenvolvimento de
               aplicativos e sites personalizados para atender às necessidades
               específicas de empresas e indivíduos. Ao longo da minha carreira,
@@ -57,7 +57,7 @@ export function Experience() {
           </Reveal>
 
           <Reveal>
-            <ul className="flex list-none gap-4">
+            <ul className="flex list-none gap-4 flex-wrap">
               {freelancerTechs.map((tech, index) => (
                 <li className=" rounded bg-muted px-3 py-1 text-sm font-semibold transition-all hover:scale-105">
                   {tech}
