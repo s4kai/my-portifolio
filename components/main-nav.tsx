@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 
@@ -9,6 +9,7 @@ import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 import { Icons } from "@/components/icons"
 
+import { ThemeToggle } from "./theme-toggle"
 import { buttonVariants } from "./ui/button"
 
 interface MainNavProps {
@@ -18,6 +19,10 @@ interface MainNavProps {
 export function MainNav({ items }: MainNavProps) {
   const [isOpen, setIsOpen] = useState(false)
   const pathname = usePathname()
+
+  useEffect(() => {
+    setIsOpen(false)
+  }, [pathname])
 
   return (
     <>
@@ -64,6 +69,9 @@ export function MainNav({ items }: MainNavProps) {
           </nav>
         ) : null}
       </div>
+
+      {!isOpen && <ThemeToggle />}
+
       <div className="block md:hidden">
         <button
           onClick={() => setIsOpen(!isOpen)}
