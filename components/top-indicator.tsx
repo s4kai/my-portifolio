@@ -9,12 +9,12 @@ export function TopIndicator() {
   if (y != null && y > 100) {
     return (
       <div
-        className="w-12 h-12 rounded-full fixed bottom-5 right-5 bg-blue-500 cursor-pointer justify-center items-center flex transition-colors hover:bg-blue-600"
+        className="w-12 h-12 rounded-full fixed bottom-5 right-5 bg-blue-500 cursor-pointer justify-center items-center flex transition-colors hover:bg-blue-600 z-50"
         onClick={() => {
           scrollTo({ top: 0, behavior: "smooth" })
         }}
       >
-        <ArrowUp className="w-8 h-8 text-white " />
+        <ArrowUp className="w-6 h-6 text-white " />
       </div>
     )
   } else {
