@@ -15,12 +15,12 @@ export function Hero() {
           </h1>
         </Reveal>
         <Reveal>
-          <h3 className="scroll-m-20 text-2xl font-medium tracking-tight">
+          <h2 className="scroll-m-20 text-2xl font-medium tracking-tight">
             Sou um{" "}
             <span className="text-blue-800 dark:text-blue-500">
               Fullstack Developer
             </span>
-          </h3>
+          </h2>
         </Reveal>
         <Reveal>
           <p className="max-w-[700px] text-lg text-muted-foreground">
