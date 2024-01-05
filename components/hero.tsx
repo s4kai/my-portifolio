@@ -18,7 +18,7 @@ export function Hero() {
           <h2 className="scroll-m-20 text-2xl font-medium tracking-tight">
             Sou um{" "}
             <span className="text-blue-800 dark:text-blue-500">
-              Fullstack Developer
+              Software Developer
             </span>
           </h2>
         </Reveal>
