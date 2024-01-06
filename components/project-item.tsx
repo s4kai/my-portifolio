@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
 
@@ -28,34 +29,41 @@ export function ProjectItem() {
     >
       <Card className="border-none ">
         <div className="grid max-h-60 place-content-center rounded-md bg-muted p-10">
-          {/*    <img
-          src="https://picsum.photos/720/405"
-          className="rounded-xl max-h-[300px] translate-y-20  object-cover z-0 hover:rotate-3 hover:scale-105 transition-all duration-200 ease-in-out transform"
-          alt=""
-        /> */}
+          <Image
+            src="/projects/ideias.avif"
+            width={900}
+            height={500}
+            className="rounded-xl max-h-[300px] translate-y-20  object-cover z-0 hover:rotate-3 hover:scale-105 transition-all duration-200 ease-in-out transform"
+            alt=""
+          />
         </div>
-        <Reveal>
-          <CardHeader className="relative z-10 bg-white dark:bg-slate-950">
-            <div className="flex flex-row items-center gap-4 ">
-              <CardTitle>Card Title</CardTitle>
-              <div className="flex-1">
-                <Separator />
-              </div>
+
+        <CardHeader className="relative z-10 bg-white dark:bg-slate-950">
+          <div className="flex flex-row items-center gap-4 ">
+            <Reveal>
+              <CardTitle>Projeto em Desenvolvimento</CardTitle>
+            </Reveal>
+
+            <div className="flex-1">
+              <Separator />
+            </div>
+
+            <Reveal>
               <div className="flex gap-2">
                 <Icons.gitHub className="h-6 w-6" />
                 <Icons.externalLink className="h-6 w-6" />
               </div>
-            </div>
+            </Reveal>
+          </div>
+          <Reveal>
+            <CardDescription>Aqui serão listadas a stack</CardDescription>
+          </Reveal>
+        </CardHeader>
 
-            <CardDescription>Flutter - MUI - Python - FastAPI</CardDescription>
-          </CardHeader>
-        </Reveal>
         <Reveal>
           <CardContent className="relative  z-10 bg-white dark:bg-slate-950">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci,
-            quam aliquid voluptatem reprehenderit vero dolor deleniti
-            necessitatibus, alias accusamus nam inventore nostrum vel expedita
-            quos nulla veritatis atque odit eligendi.
+            Os projetos atualmente estão sendo atualizados, em breve teremos
+            grandes novidades.
             <Link href={"/"} className="ml-2 text-blue-500">
               Veja mais
             </Link>
